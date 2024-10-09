@@ -14,5 +14,5 @@
         "dest": "manage.py"
       }
     ],
-    "buildCommand": "cat requirements.txt | xargs -n 1 pip install"
+    "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt"
   }
