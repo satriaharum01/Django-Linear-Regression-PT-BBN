@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python",
+        "config": {
+          "runtime": "python3.11"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "manage.py"
+      }
+    ],
+    "buildCommand": "cat requirements.txt | xargs -n 1 pip install"
+  }
